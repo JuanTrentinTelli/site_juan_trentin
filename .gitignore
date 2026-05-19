@@ -1,0 +1,21 @@
+# Claude Code internals
+.claude/
+
+# CV (hospede em outro lugar e coloque o link no site)
+curriculo/
+images/
+
+# OS
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.suo
+*.user
+
+# Env
+.env
+.env.*

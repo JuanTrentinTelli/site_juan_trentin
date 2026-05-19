@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Juan Trentin — Supervisor de Sistemas & Security Researcher</title>
+  <meta name="description" content="Portfólio de Juan Trentin Telli. 10 anos em IT: ERP corporativo, infraestrutura de rede e pesquisa em segurança ofensiva. Francisco Beltrão, PR.">
+  <meta name="author" content="Juan Trentin Telli">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Juan Trentin — Systems Supervisor & Security Researcher">
+  <meta property="og:description" content="10 anos em IT: ERP corporativo, infraestrutura e pesquisa em segurança ofensiva. Francisco Beltrão, PR.">
+  <meta property="og:url"         content="https://juantrentin.dev">
+  <meta property="og:image"       content="https://juantrentin.dev/public/og-image.png">
+  <meta property="og:locale"      content="pt_BR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Juan Trentin — Systems Supervisor & Security Researcher">
+  <meta name="twitter:description" content="10 anos em IT: ERP corporativo, infraestrutura e pesquisa em segurança ofensiva.">
+  <meta name="twitter:image"       content="https://juantrentin.dev/public/og-image.png">
+
+  <!-- Schema.org Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Juan Trentin Telli",
+    "alternateName": "GhostOpcode",
+    "jobTitle": "Supervisor de Sistemas",
+    "url": "https://juantrentin.dev",
+    "email": "juan.trentin.telli@gmail.com",
+    "telephone": "+5546984156874",
+    "sameAs": [
+      "https://www.linkedin.com/in/juan-trentin-092aa61bb/"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Francisco Beltrão",
+      "addressRegion": "PR",
+      "addressCountry": "BR"
+    },
+    "knowsAbout": [
+      "Infraestrutura de TI",
+      "Segurança da Informação",
+      "Pentest",
+      "Python",
+      "Oracle Database",
+      "pfSense"
+    ]
+  }
+  </script>
+
+  <!-- Avoid FOUC: set theme before CSS renders -->
+  <script>
+    (function () {
+      var s = localStorage.getItem('theme');
+      var p = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.dataset.theme = s || p;
+    })();
+  </script>
+
+  <!-- Fonts: preconnect + Google Fonts (swap for performance) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>J</text></svg>">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader" class="preloader" role="status" aria-label="Carregando...">
+    <div class="preloader-inner">
+      <p class="preloader-line" id="pl-1"><span class="pl-prompt">&gt;</span> sys.init()</p>
+      <p class="preloader-line" id="pl-2"><span class="pl-prompt">&gt;</span> loading modules<span class="pl-track"><span class="pl-bar"></span></span></p>
+      <p class="preloader-line" id="pl-3"><span class="pl-prompt">&gt;</span> <span class="pl-ok">access granted</span></p>
+    </div>
+  </div>
+
+  <!-- Canvas de fundo global -->
+  <canvas id="hero-bg" aria-hidden="true"></canvas>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="mobile-menu" aria-hidden="true" role="dialog" aria-label="Menu de navegação">
+    <nav class="mobile-menu-nav">
+      <a href="#sobre">sobre</a>
+      <a href="#experiencia">experiência</a>
+      <a href="#projetos">projetos</a>
+      <a href="#servicos">serviços</a>
+      <a href="#terminal">terminal</a>
+      <a href="#contato">contato</a>
+    </nav>
+    <p class="mobile-menu-footer">juan@ghostopcode:~$</p>
+  </div>
+
+  <!-- Skip link -->
+  <a href="#main" class="skip-link">Pular para o conteúdo</a>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ══ HEADER ══════════════════════════════════════ -->
+  <header class="header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+
+        <a href="#inicio" class="logo" aria-label="Juan Trentin — início">JT</a>
+
+        <nav class="nav" aria-label="Navegação principal">
+          <ul class="nav-links" role="list">
+            <li><a href="#sobre">sobre</a></li>
+            <li><a href="#experiencia">experiência</a></li>
+            <li><a href="#projetos">projetos</a></li>
+            <li><a href="#servicos">serviços</a></li>
+            <li><a href="#terminal">terminal</a></li>
+            <li><a href="#contato">contato</a></li>
+          </ul>
+
+          <button
+            id="hamburger"
+            class="hamburger"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            type="button"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            aria-label="Alternar tema"
+            type="button"
+          >
+            <span id="theme-icon" aria-hidden="true">
+              <!-- Injected by main.js -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            </span>
+          </button>
+        </nav>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ══ MAIN ════════════════════════════════════════ -->
+  <main id="main">
+
+    <!-- ── HERO ─────────────────────────────────────── -->
+    <section class="hero" id="inicio" aria-label="Apresentação">
+      <div class="container">
+        <div class="hero-content">
+
+          <p class="hero-label">// systems supervisor · security researcher</p>
+
+          <h1 class="hero-name">
+            <span class="hero-name-text">Juan Trentin Telli</span><span class="hero-cursor" aria-hidden="true"></span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Construo sistemas que funcionam.<br>
+            <span class="accent">Quebro sistemas que não deveriam.</span>
+          </p>
+
+          <p class="hero-paragraph">
+            10 anos em IT entre análise de sistemas, ERP corporativo e pesquisa em
+            segurança ofensiva. Atualmente supervisionando infraestrutura na Plantagro
+            e operando como GhostOpcode em pentest.
+          </p>
+
+          <p class="hero-location">// Guarapuava, pr &nbsp;·&nbsp; disponível para projetos</p>
+
+          <div class="hero-ctas">
+            <a href="#contato" class="cta-primary">entrar em contato</a>
+            <a href="#projetos" class="cta-ghost">ver projetos &darr;</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bottom-right timestamp + status -->
+      <div class="hero-meta" aria-hidden="true">
+        <span id="hero-clock"></span><br>
+        <span class="status-online">&gt; system.online</span>
+      </div>
+
+      <!-- Scroll cue -->
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="scroll-indicator-line"></div>
+      </div>
+    </section>
+
+    <!-- ── SOBRE ─────────────────────────────────────── -->
+    <section id="sobre" aria-labelledby="label-sobre">
+      <div class="container">
+
+        <span class="section-label" id="label-sobre">01 / sobre</span>
+
+        <div class="about-grid">
+
+          <div class="about-text fade-up">
+            <p>
+              Comecei como <strong>Analista de Sistemas na Ellon Tecnologia</strong>,
+              passando mais de 5 anos implementando e adaptando ERPs para clientes de diferentes segmentos.
+              De lá fui para a <strong>Viasoft</strong>, onde atuei como analista de requisitos e testes —
+              e hoje administro a mesma stack do lado cliente, com uma perspectiva dupla rara.
+            </p>
+            <br>
+            <p>
+              Hoje sou o único responsável pela infraestrutura de TI da Plantagro —
+              <strong>ERP, banco Oracle, firewall, BI, tudo</strong>. Em paralelo, pesquiso
+              segurança ofensiva sob o nome <strong>GhostOpcode</strong>: pentest, recon,
+              exploração de aplicações web.
+            </p>
+            <br>
+            <p>
+              Acredito em construir coisas que escalam e em entender sistemas de ponta
+              a ponta antes de tocá-los.
+            </p>
+          </div>
+
+          <div class="about-stack fade-up" role="complementary" aria-label="Stack atual">
+            <div class="stack-group">
+              <span class="stack-key">&gt; currently</span>
+              <span class="stack-value">python · oracle plsql · flask</span>
+              <span class="stack-value">pfsense · power bi · linux</span>
+            </div>
+            <div class="stack-group">
+              <span class="stack-key">&gt; studying</span>
+              <span class="stack-value">offensive security (sycp)</span>
+              <span class="stack-value">langflow · docker · pivoting</span>
+            </div>
+            <div class="stack-group">
+              <span class="stack-key">&gt; reading</span>
+              <span class="stack-value">taleb · marco aurélio · brunet</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EXPERIÊNCIA ───────────────────────────────── -->
+    <section id="experiencia" aria-labelledby="label-exp">
+      <div class="container">
+
+        <span class="section-label" id="label-exp">02 / experiência</span>
+
+        <div class="exp-cards">
+
+          <!-- Plantagro -->
+          <article class="exp-card current fade-up" aria-label="Plantagro Insumos Agrícolas">
+            <div class="exp-header">
+              <div>
+                <p class="exp-company">Plantagro Insumos Agrícolas</p>
+                <p class="exp-role">Supervisor de Sistemas</p>
+              </div>
+              <time class="exp-period" datetime="2024-01">01/2024 — presente</time>
+            </div>
+            <ul class="exp-list" aria-label="Responsabilidades">
+              <li>Coordenar a infraestrutura de TI, garantindo disponibilidade, segurança e desempenho dos sistemas corporativos.</li>
+              <li>Desenvolver relatórios personalizados em Delphi (Pascal) para apoio estratégico à gestão.</li>
+              <li>Criar e manter dashboards interativos em Python para consolidação de indicadores empresariais.</li>
+              <li>Administrar firewall pfSense, controlando acessos, políticas de segurança e integridade da rede.</li>
+              <li>Gerenciar usuários e permissões de sistema, assegurando conformidade e controle de acessos internos.</li>
+            </ul>
+            <div class="exp-results" aria-label="Resultados">
+              <p class="exp-results-label">resultados</p>
+              <ul class="exp-list">
+                <li>Estruturei dashboards gerenciais em Python que ampliaram a visibilidade estratégica de indicadores (vendas, estoque, compras), fortalecendo a tomada de decisão baseada em dados.</li>
+                <li>Reforcei a segurança da rede corporativa por meio da gestão de firewall e controle de permissões, elevando a governança de acessos e a confiabilidade dos sistemas.</li>
+              </ul>
+            </div>
+            <div class="exp-tags" aria-label="Tecnologias">
+              <span class="tag active">atual</span>
+              <span class="tag">Python</span>
+              <span class="tag">Flask</span>
+              <span class="tag">Oracle DB</span>
+              <span class="tag">pfSense</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">Delphi</span>
+            </div>
+          </article>
+
+          <!-- Viasoft -->
+          <article class="exp-card fade-up" aria-label="Viasoft">
+            <div class="exp-header">
+              <div>
+                <p class="exp-company">Viasoft</p>
+                <p class="exp-role">Analista de Requisitos / Testes</p>
+              </div>
+              <time class="exp-period" datetime="2022-09">09/2022 — 08/2023</time>
+            </div>
+            <ul class="exp-list" aria-label="Responsabilidades">
+              <li>Elaborar e executar casos de teste funcionais e de regressão para aprimoramento do CRM.</li>
+              <li>Levantar e documentar requisitos junto às áreas envolvidas, garantindo clareza e rastreabilidade.</li>
+              <li>Validar entregas técnicas antes da implantação, assegurando qualidade e aderência às regras de negócio.</li>
+              <li>Apoiar a integração e orientação de novos colaboradores na equipe.</li>
+              <li>Manter documentação técnica organizada, promovendo transparência e padronização dos processos.</li>
+            </ul>
+            <div class="exp-results" aria-label="Resultados">
+              <p class="exp-results-label">resultados</p>
+              <ul class="exp-list">
+                <li>Desenvolvi casos de teste estruturados que aumentaram a qualidade do CRM, reduzindo falhas e fortalecendo a validação funcional das entregas.</li>
+                <li>Padronizei documentação e rastreabilidade de tarefas, promovendo organização processual, integração de equipe e melhoria na comunicação técnica.</li>
+              </ul>
+            </div>
+            <div class="exp-tags">
+              <span class="tag">Testes funcionais</span>
+              <span class="tag">Requisitos</span>
+              <span class="tag">CRM</span>
+            </div>
+          </article>
+
+          <!-- Ellon Tecnologia -->
+          <article class="exp-card fade-up" aria-label="Ellon Tecnologia em Gestão">
+            <div class="exp-header">
+              <div>
+                <p class="exp-company">Ellon Tecnologia em Gestão</p>
+                <p class="exp-role">Analista de Sistemas</p>
+              </div>
+              <time class="exp-period" datetime="2017-03">03/2017 — 09/2022</time>
+            </div>
+            <ul class="exp-list" aria-label="Responsabilidades">
+              <li>Analisar documentos e requisitos fornecidos pelos clientes para implementação no sistema.</li>
+              <li>Desenvolver e adaptar funcionalidades conforme necessidades específicas do negócio.</li>
+              <li>Garantir integridade e consistência dos dados durante processos de implantação.</li>
+              <li>Identificar e corrigir falhas sistêmicas visando melhoria de performance e estabilidade.</li>
+              <li>Realizar validações técnicas antes da liberação de funcionalidades, reduzindo riscos e retrabalho.</li>
+            </ul>
+            <div class="exp-results" aria-label="Resultados">
+              <p class="exp-results-label">resultados</p>
+              <ul class="exp-list">
+                <li>Implementei funcionalidades com foco em integridade de dados e performance, elevando a confiabilidade do sistema para os clientes.</li>
+                <li>Atuei na análise crítica de requisitos, reduzindo retrabalho e fortalecendo a qualidade técnica das entregas.</li>
+              </ul>
+            </div>
+            <div class="exp-tags">
+              <span class="tag">ERP</span>
+              <span class="tag">Requisitos</span>
+              <span class="tag">Implantação</span>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Certificados -->
+        <div class="certs fade-up" aria-labelledby="label-certs">
+          <span class="section-label" id="label-certs" style="margin-bottom: var(--sp-6);">certificações</span>
+          <div class="certs-grid">
+
+            <div class="cert-item">
+              <span class="cert-name">Pentest do Zero ao Profissional</span>
+              <span class="cert-meta">Solyd Offensive Security · Jan/2026</span>
+            </div>
+            <div class="cert-item">
+              <span class="cert-name">Formação Hacker</span>
+              <span class="cert-meta">Udemy · Set/2024</span>
+            </div>
+            <div class="cert-item">
+              <span class="cert-name">Automação de Testes Web com Selenium &amp; Python</span>
+              <span class="cert-meta">Udemy · Ago/2023</span>
+            </div>
+            <div class="cert-item">
+              <span class="cert-name">Scrum Foundation Professional Certificate (SFPC)</span>
+              <span class="cert-meta">Certiprof · Out/2021</span>
+            </div>
+            <div class="cert-item">
+              <span class="cert-name">Certificação Scrum Product Owner</span>
+              <span class="cert-meta">Udemy · Nov/2021</span>
+            </div>
+            <div class="cert-item">
+              <span class="cert-name">Gerenciamento de Riscos + Gestão de Projetos</span>
+              <span class="cert-meta">Udemy · Jun/2022</span>
+            </div>
+            <div class="cert-item">
+              <span class="cert-name">Engenharia de Requisitos: levantar, documentar e validar</span>
+              <span class="cert-meta">Alura · Out/2022</span>
+            </div>
+            <div class="cert-item">
+              <span class="cert-name">Kanban: evolua suas entregas com métricas</span>
+              <span class="cert-meta">Alura · Nov/2022</span>
+            </div>
+            <div class="cert-item">
+              <span class="cert-name">Inteligência Emocional: práticas para o cotidiano</span>
+              <span class="cert-meta">Alura · Jan/2023</span>
+            </div>
+            <div class="cert-item">
+              <span class="cert-name">Criatividade: potencialize a partir das suas motivações</span>
+              <span class="cert-meta">Alura · Jan/2023</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── PROJETOS ───────────────────────────────────── -->
+    <section id="projetos" aria-labelledby="label-proj">
+      <div class="container">
+
+        <span class="section-label" id="label-proj">03 / projetos</span>
+
+        <div class="projects-grid">
+
+          <!-- Plantagro Dashboard (featured — 7 cols) -->
+          <article class="project-card proj-featured fade-up" aria-label="Plantagro Dashboard">
+            <div class="project-top">
+              <h3 class="project-name">Plantagro Dashboard</h3>
+              <span class="project-tag">corporativo</span>
+            </div>
+            <p class="project-desc">
+              Dashboard interno construído sobre o schema proprietário do ERP Viasoft/Agro3C.
+              Módulos de Pedidos, Notas Fiscais e Financeiro com reconciliação direta no banco Oracle.
+              Resolveu divergências históricas de cálculo em Contas a Pagar/Receber via investigação
+              direta no schema — sem acesso a documentação oficial.
+            </p>
+            <div class="project-stack">
+              <span>Flask</span><span>Oracle DB</span><span>Jinja2</span><span>vanilla JS</span><span>Power BI</span>
+            </div>
+          </article>
+
+          <!-- A.I.L.A. (5 cols) -->
+          <article class="project-card proj-secondary fade-up" aria-label="A.I.L.A.">
+            <div class="project-top">
+              <h3 class="project-name">A.I.L.A.</h3>
+              <span class="project-tag">ia local</span>
+            </div>
+            <p class="project-desc">
+              Assistente de IA companion 100% offline. STT, TTS, wake word e memória persistente.
+              Integração multi-cômodo via microfones e LEDs. Rodando em RTX 5090.
+            </p>
+            <div class="project-stack">
+              <span>Ollama</span><span>FastAPI</span><span>Home Assistant</span><span>MQTT</span>
+            </div>
+          </article>
+
+          <!-- GhostOpcode (5 cols) -->
+          <article class="project-card proj-tertiary fade-up" aria-label="GhostOpcode Recon Framework">
+            <div class="project-top">
+              <h3 class="project-name">GhostOpcode</h3>
+              <span class="project-tag cybersec">cybersec</span>
+            </div>
+            <p class="project-desc">
+              Framework de recon interativo local (v1.9.0) com Rich UI e 19 módulos:
+              DNS, subdomain enum, port scan, dir enum, JS recon, WAF detection,
+              virtual host discovery e packet sniffing. Session chaining entre módulos
+              e CVE lookup automático via NVD API. Exporta JSON, HTML e logs de sessão.
+            </p>
+            <div class="project-stack">
+              <span>Python</span><span>Rich</span><span>Scapy</span><span>Nmap</span><span>Nuclei</span><span>Jinja2</span>
+            </div>
+          </article>
+
+          <!-- Daily Notifier (7 cols) -->
+          <article class="project-card proj-quarter fade-up" aria-label="Plantagro Daily Notifier">
+            <div class="project-top">
+              <h3 class="project-name">Plantagro Daily Notifier</h3>
+              <span class="project-tag">automação</span>
+            </div>
+            <p class="project-desc">
+              Automação D-1 que consolida dados do Oracle e dispara relatórios
+              diários para a diretoria via WhatsApp e e-mail: contas a pagar/receber
+              com vencimento no dia, pedidos e notas emitidas no dia anterior.
+              Scheduleado, sem intervenção manual.
+            </p>
+            <div class="project-stack">
+              <span>Python</span><span>Oracle DB</span><span>smtplib</span><span>WhatsApp API</span><span>schedule</span>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- GitHub projects -->
+        <p class="projects-sublabel">// github</p>
+        <div class="projects-github-grid">
+
+          <!-- ARTools Precision Pen -->
+          <article class="project-card proj-github fade-up" aria-label="ARTools Precision Pen">
+            <a
+              href="https://artools-liart.vercel.app"
+              class="project-img-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ver ARTools Precision Pen ao vivo"
+            >
+              <div class="project-img">
+                <img
+                  src="images/artools.jpg"
+                  alt="ARTools Precision Pen — landing page de produto"
+                  width="800"
+                  height="450"
+                  loading="lazy"
+                >
+                <div class="project-img-overlay">ver ao vivo →</div>
+              </div>
+            </a>
+            <div class="project-body">
+              <div class="project-top">
+                <h3 class="project-name">ARTools Precision Pen</h3>
+                <span class="project-tag">frontend</span>
+              </div>
+              <p class="project-desc">
+                Landing page de produto premium para a ARTools Precision Pen.
+                Design dark minimalista focado em conversão, com seções de produto,
+                especificações técnicas e CTA de compra.
+              </p>
+              <div class="project-stack">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="https://artools-liart.vercel.app" class="project-link" target="_blank" rel="noopener noreferrer">↗ ao vivo</a>
+                <a href="https://github.com/JuanTrentinTelli/Artools" class="project-link" target="_blank" rel="noopener noreferrer">↗ github</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Páscoa 2026 -->
+          <article class="project-card proj-github fade-up" aria-label="Páscoa 2026 — Landing Page">
+            <a
+              href="https://pascoa-2026-three.vercel.app/"
+              class="project-img-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ver Páscoa 2026 ao vivo"
+            >
+              <div class="project-img">
+                <img
+                  src="images/pascoa_2026.jpg"
+                  alt="Páscoa 2026 — landing page de produto digital"
+                  width="800"
+                  height="450"
+                  loading="lazy"
+                >
+                <div class="project-img-overlay">ver ao vivo →</div>
+              </div>
+            </a>
+            <div class="project-body">
+              <div class="project-top">
+                <h3 class="project-name">Páscoa 2026</h3>
+                <span class="project-tag">produto digital</span>
+              </div>
+              <p class="project-desc">
+                Landing page de alta conversão para método de vendas de Páscoa.
+                Copy orientada a resultado, vídeo de VSL, prova social e urgência.
+                Mais de 2.000 alunos captados.
+              </p>
+              <div class="project-stack">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="https://pascoa-2026-three.vercel.app/" class="project-link" target="_blank" rel="noopener noreferrer">↗ ao vivo</a>
+                <a href="https://github.com/JuanTrentinTelli/pascoa_2026" class="project-link" target="_blank" rel="noopener noreferrer">↗ github</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Colorea con Jesús -->
+          <article class="project-card proj-github fade-up" aria-label="Colorea con Jesús — Landing Page">
+            <a
+              href="https://coloreaconjesus.com/"
+              class="project-img-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ver Colorea con Jesús ao vivo"
+            >
+              <div class="project-img">
+                <img
+                  src="images/colorea_con_jesus.jpg"
+                  alt="Colorea con Jesús — landing page de produto digital"
+                  width="800"
+                  height="450"
+                  loading="lazy"
+                >
+                <div class="project-img-overlay">ver ao vivo →</div>
+              </div>
+            </a>
+            <div class="project-body">
+              <div class="project-top">
+                <h3 class="project-name">Colorea con Jesús</h3>
+                <span class="project-tag">produto digital</span>
+              </div>
+              <p class="project-desc">
+                Landing page de produto digital com 20 jogos cristãos para imprimir.
+                Funil de vendas com copy de conversão, prova social e oferta com
+                desconto. Público-alvo: famílias e educadores religiosos.
+              </p>
+              <div class="project-stack">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="https://coloreaconjesus.com/" class="project-link" target="_blank" rel="noopener noreferrer">↗ ao vivo</a>
+                <span class="project-link" style="opacity:0.4;cursor:default">⊘ repositório privado</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Mesa Sagrada -->
+          <article class="project-card proj-github fade-up" aria-label="Mesa Sagrada — Landing Page">
+            <a
+              href="https://site-fe-que-transforma-latam.vercel.app/"
+              class="project-img-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ver Mesa Sagrada ao vivo"
+            >
+              <div class="project-img">
+                <img
+                  src="images/fe_que_transforma_latam.jpg"
+                  alt="Mesa Sagrada — landing page de produto digital"
+                  width="800"
+                  height="450"
+                  loading="lazy"
+                >
+                <div class="project-img-overlay">ver ao vivo →</div>
+              </div>
+            </a>
+            <div class="project-body">
+              <div class="project-top">
+                <h3 class="project-name">Mesa Sagrada</h3>
+                <span class="project-tag">produto digital</span>
+              </div>
+              <p class="project-desc">
+                Landing page em espanhol para coleção de 20 jogos bíblicos imprimíveis.
+                Funil de vendas LATAM com urgência, prova social e oferta
+                com desconto de 87%. Entrega instantânea via e-mail.
+              </p>
+              <div class="project-stack">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="https://site-fe-que-transforma-latam.vercel.app/" class="project-link" target="_blank" rel="noopener noreferrer">↗ ao vivo</a>
+                <span class="project-link" style="opacity:0.4;cursor:default">⊘ repositório privado</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Galpão CT Store -->
+          <article class="project-card proj-github fade-up" aria-label="Galpão CT Store — Site institucional">
+            <a
+              href="https://www.galpaoctstore.com.br/"
+              class="project-img-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ver Galpão CT Store ao vivo"
+            >
+              <div class="project-img">
+                <img
+                  src="images/site_arma_camacho.jpg"
+                  alt="Galpão Clube de Caça e Tiro — site institucional com catálogo"
+                  width="800"
+                  height="450"
+                  loading="lazy"
+                >
+                <div class="project-img-overlay">ver ao vivo →</div>
+              </div>
+            </a>
+            <div class="project-body">
+              <div class="project-top">
+                <h3 class="project-name">Galpão CT Store</h3>
+                <span class="project-tag">institucional</span>
+              </div>
+              <p class="project-desc">
+                Site institucional para clube de caça e tiro em Guarapuava, PR.
+                Catálogo de produtos, área de login para clientes, carrinho de compras
+                e seção de contato. Design dark tático com identidade visual própria.
+              </p>
+              <div class="project-stack">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="https://www.galpaoctstore.com.br/" class="project-link" target="_blank" rel="noopener noreferrer">↗ ao vivo</a>
+                <span class="project-link" style="opacity:0.4;cursor:default">⊘ repositório privado</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── SERVIÇOS ──────────────────────────────────── -->
+    <section id="servicos" aria-labelledby="label-servicos">
+      <div class="container">
+
+        <span class="section-label" id="label-servicos">04 / serviços</span>
+
+        <div class="services-headline fade-up">
+          <h2 class="services-title">landing pages que <span class="accent">vendem</span></h2>
+          <p class="services-subtitle">Do briefing à entrega em até 10 dias. Design responsivo, copy focado em conversão e resultado mensurável.</p>
+        </div>
+
+        <article class="service-card fade-up" aria-label="Serviço: Landing Page">
+          <div class="service-card-left">
+            <div class="service-card-header">
+              <span class="service-badge">landing page</span>
+              <span class="service-tag">serviço principal</span>
+            </div>
+            <p class="service-desc">
+              Página de alta conversão desenhada para transformar visitantes em clientes.
+              Cada detalhe — headline, CTA, prova social — pensado para o seu público e objetivo.
+            </p>
+            <ul class="service-list" aria-label="O que está incluído">
+              <li>Design responsivo e mobile-first</li>
+              <li>Copy orientado a conversão</li>
+              <li>Formulário ou CTA integrado ao WhatsApp</li>
+              <li>Meta Pixel + Google Analytics (opcional)</li>
+              <li>Velocidade otimizada — Core Web Vitals</li>
+              <li>Até 2 rodadas de revisão incluídas</li>
+            </ul>
+          </div>
+
+          <div class="service-card-right">
+            <div class="service-price-block">
+              <span class="service-price-label">a partir de</span>
+              <span class="service-price-value">R$ 600</span>
+              <span class="service-price-note">por projeto</span>
+            </div>
+
+            <div class="service-timeline">
+              <span class="service-timeline-label">prazo de entrega</span>
+              <span class="service-timeline-value">7 – 10 dias</span>
+            </div>
+
+            <a
+              href="https://wa.me/5546984156874?text=Ol%C3%A1%20Juan!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20conversar%20sobre%20um%20projeto%20de%20landing%20page."
+              class="cta-whatsapp"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Conversar no WhatsApp"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              falar no whatsapp
+            </a>
+
+            <p class="service-bigger-note">
+              Projeto maior ou diferente?<br>
+              <a href="https://wa.me/5546984156874?text=Ol%C3%A1%20Juan!%20Tenho%20um%20projeto%20e%20quero%20conversar%20sobre%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer">Orçamento personalizado — sem compromisso.</a>
+            </p>
+          </div>
+        </article>
+
+        <div class="services-process fade-up" aria-label="Como funciona">
+          <div class="process-step">
+            <span class="process-num">01</span>
+            <h3 class="process-title">briefing</h3>
+            <p class="process-desc">Você me conta o negócio, o público e o objetivo. 30 minutos de conversa definem tudo.</p>
+          </div>
+          <div class="process-step">
+            <span class="process-num">02</span>
+            <h3 class="process-title">design & dev</h3>
+            <p class="process-desc">Protótipo em 48h. Refino com seu feedback e desenvolvo com código limpo e rápido.</p>
+          </div>
+          <div class="process-step">
+            <span class="process-num">03</span>
+            <h3 class="process-title">entrega</h3>
+            <p class="process-desc">Site no ar, link na sua mão. Você indica para um conhecido e a parceria continua.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── TERMINAL ──────────────────────────────────── -->
+    <section id="terminal" aria-labelledby="label-terminal">
+      <div class="container">
+
+        <span class="section-label" id="label-terminal">05 / terminal</span>
+
+        <div
+          class="terminal-wrapper"
+          id="terminal-wrapper"
+          role="application"
+          aria-label="Terminal interativo. Digite help para ver os comandos disponíveis."
+        >
+          <div class="terminal-bar" aria-hidden="true">
+            <div class="terminal-dots">
+              <div class="dot dot-red"></div>
+              <div class="dot dot-yellow"></div>
+              <div class="dot dot-green"></div>
+            </div>
+            <span class="terminal-title">juan@ghostopcode: ~</span>
+          </div>
+
+          <div class="terminal-body">
+            <div
+              class="terminal-output-area"
+              id="terminal-output"
+              role="log"
+              aria-live="polite"
+              aria-label="Saída do terminal"
+            ></div>
+
+            <div class="terminal-input-row">
+              <span class="terminal-prompt-text" aria-hidden="true">juan@ghostopcode:~$&nbsp;</span>
+              <label for="terminal-input" class="sr-only">Digite um comando</label>
+              <input
+                type="text"
+                id="terminal-input"
+                class="terminal-input"
+                autocomplete="off"
+                autocorrect="off"
+                autocapitalize="off"
+                spellcheck="false"
+                aria-label="Entrada de comando do terminal"
+                placeholder="digite um comando..."
+              >
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── CONTATO ───────────────────────────────────── -->
+    <section id="contato" aria-labelledby="label-contato">
+      <div class="container">
+
+        <span class="section-label" id="label-contato">06 / contato</span>
+
+        <p class="contact-headline">
+          Aberto para projetos de infra, dashboards corporativos,
+          pentest e consultoria em segurança.
+        </p>
+
+        <nav class="contact-links" aria-label="Links de contato">
+          <a
+            href="mailto:juan.trentin.telli@gmail.com"
+            class="contact-link"
+            aria-label="Enviar e-mail para Juan Trentin"
+          >email</a>
+
+          <a
+            href="https://www.linkedin.com/in/juan-trentin-092aa61bb/"
+            class="contact-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Perfil do LinkedIn de Juan Trentin (abre em nova aba)"
+          >linkedin</a>
+
+          <a
+            href="https://github.com/JuanTrentinTelli?tab=repositories"
+            class="contact-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Perfil do GitHub JuanTrentinTelli (abre em nova aba)"
+          >github</a>
+        </nav>
+
+        <a
+          href="curriculo/Juan Trentin - CV 2026.pdf"
+          class="contact-cv"
+          download
+          aria-label="Baixar currículo em PDF"
+        >download cv &darr;</a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ FOOTER ══════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-text">&copy; 2026 Juan Trentin Telli</p>
+        <p class="footer-text">
+          construído com <span class="acc">HTML</span> &middot; <span class="acc">CSS</span> &middot; <span class="acc">JS</span>
+          &nbsp;&middot;&nbsp; sem cookies, sem tracking
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Scripts (defer = executa após parse do DOM, em ordem) -->
+  <script defer src="assets/js/data.js"></script>
+  <script defer src="assets/js/terminal.js"></script>
+  <script defer src="assets/js/animations.js"></script>
+  <script defer src="assets/js/main.js"></script>
+
+</body>
+</html>
