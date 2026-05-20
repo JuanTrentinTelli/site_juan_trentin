@@ -57,8 +57,8 @@ function initClock() {
 
   function tick() {
     var now = new Date();
-    var iso = now.toISOString().slice(0, 19).replace('T', ' ');
-    el.textContent = iso + ' UTC';
+    var brt = now.toLocaleString('sv-SE', { timeZone: 'America/Sao_Paulo', hour12: false });
+    el.textContent = brt + ' BRT';
   }
 
   tick();

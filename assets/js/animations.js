@@ -306,7 +306,7 @@ function initHeroBg() {
       x:       Math.random() * canvas.width,
       y:       randomY ? Math.random() * canvas.height : canvas.height + 20,
       speed:   0.18 + Math.random() * 0.22,
-      opacity: 0.032 + Math.random() * 0.038,
+      opacity: 0.016 + Math.random() * 0.020,
       size:    size,
       text:    snippets[Math.floor(Math.random() * snippets.length)],
     };
