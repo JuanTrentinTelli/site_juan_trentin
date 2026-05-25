@@ -148,6 +148,7 @@ function initMobileMenu() {
 // ── Boot ──────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', function () {
   initTheme();
+  initI18n();
   initHeader();
   initScrollProgress();
   initClock();
