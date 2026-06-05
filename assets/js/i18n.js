@@ -7,7 +7,7 @@ var I18n = {
 
     hero_label: '// systems supervisor · security researcher',
     hero_subtitle: 'Building systems that work.<br><span class="accent">Breaking systems that shouldn\'t.</span>',
-    hero_paragraph: '10 years in IT across systems analysis, enterprise ERP and offensive security research. Operating as GhostOpcode in pentesting and open to new challenges.',
+    hero_paragraph: '10 years in IT building and sustaining corporate systems — ERP, infrastructure and security. I deliver technical results with business awareness and work well both in teams and independently.',
     hero_location: '// Guarapuava, pr  ·  available for projects',
     cta_contact: 'get in touch',
     cta_projects: 'view projects ↓',
@@ -18,8 +18,8 @@ var I18n = {
     label_certs: 'certifications',
 
     about_p1: 'Started as a <strong>Systems Analyst at Ellon Tecnologia</strong>, spending over 5 years implementing and adapting ERPs for clients across different segments. From there I moved to <strong>Viasoft</strong>, working as a requirements and testing analyst — then moved to manage the same stack from the client side, gaining a rare dual perspective.',
-    about_p2: 'At Plantagro I was solely responsible for IT infrastructure — <strong>ERP, Oracle database, firewall, BI, everything</strong>. In parallel, I research offensive security under the name <strong>GhostOpcode</strong>: pentesting, recon, web application exploitation.',
-    about_p3: 'I believe in building things that scale and understanding systems end-to-end before touching them.',
+    about_p2: 'At Plantagro I was responsible for the entire IT infrastructure — <strong>ERP, Oracle database, firewall and BI</strong> — working closely with management to ensure system availability and security. In parallel, I research offensive security under the name <strong>GhostOpcode</strong>: pentesting, recon, web application exploitation.',
+    about_p3: 'I prefer to understand the full system before touching any part of it — the right diagnosis avoids rework and delivers results faster for the business.',
 
     exp_results_label: 'results',
 
@@ -107,7 +107,7 @@ var I18n = {
 
     hero_label: '// supervisor de sistemas · investigador de seguridad',
     hero_subtitle: 'Construyo sistemas que funcionan.<br><span class="accent">Rompo los que no deberían.</span>',
-    hero_paragraph: '10 años en IT entre análisis de sistemas, ERP corporativo e investigación en seguridad ofensiva. Operando como GhostOpcode en pentesting y abierto a nuevos desafíos.',
+    hero_paragraph: '10 años en IT construyendo y sosteniendo sistemas corporativos — ERP, infraestructura y seguridad. Entrego resultados técnicos con visión de negocio y trabajo bien tanto en equipo como de forma autónoma.',
     hero_location: '// Guarapuava, pr  ·  disponible para proyectos',
     cta_contact: 'contactar',
     cta_projects: 'ver proyectos ↓',
@@ -118,8 +118,8 @@ var I18n = {
     label_certs: 'certificaciones',
 
     about_p1: 'Comencé como <strong>Analista de Sistemas en Ellon Tecnologia</strong>, pasando más de 5 años implementando y adaptando ERPs para clientes de diferentes segmentos. De allí pasé a <strong>Viasoft</strong>, donde trabajé como analista de requisitos y pruebas — luego pasé a administrar el mismo stack del lado cliente, adquiriendo una perspectiva doble poco común.',
-    about_p2: 'En Plantagro fui el único responsable de la infraestructura de TI — <strong>ERP, base Oracle, firewall, BI, todo</strong>. En paralelo, investigo seguridad ofensiva bajo el nombre <strong>GhostOpcode</strong>: pentest, recon, explotación de aplicaciones web.',
-    about_p3: 'Creo en construir cosas que escalan y en entender los sistemas de punta a punta antes de tocarlos.',
+    about_p2: 'En Plantagro respondí por toda la infraestructura de TI — <strong>ERP, base Oracle, firewall y BI</strong> — trabajando de cerca con la gestión para garantizar disponibilidad y seguridad de los sistemas. En paralelo, investigo seguridad ofensiva bajo el nombre <strong>GhostOpcode</strong>: pentest, recon, explotación de aplicaciones web.',
+    about_p3: 'Prefiero entender el sistema completo antes de tocar cualquier parte — el diagnóstico correcto evita retrabajo y entrega resultados más rápido para el negocio.',
 
     exp_results_label: 'resultados',
 
@@ -207,7 +207,7 @@ var I18n = {
 
     hero_label: '// systems supervisor · security researcher',
     hero_subtitle: 'Construo sistemas que funcionam.<br><span class="accent">Quebro sistemas que não deveriam.</span>',
-    hero_paragraph: '10 anos em IT entre análise de sistemas, ERP corporativo e pesquisa em segurança ofensiva. Operando como GhostOpcode em pentest e aberto a novos desafios.',
+    hero_paragraph: '10 anos em IT construindo e sustentando sistemas corporativos — ERP, infraestrutura e segurança. Entrego resultado técnico com visão de negócio e trabalho bem tanto em equipe quanto de forma autônoma.',
     hero_location: '// Guarapuava, pr  ·  disponível para projetos',
     cta_contact: 'entrar em contato',
     cta_projects: 'ver projetos ↓',
@@ -218,8 +218,8 @@ var I18n = {
     label_certs: 'certificações',
 
     about_p1: 'Comecei como <strong>Analista de Sistemas na Ellon Tecnologia</strong>, passando mais de 5 anos implementando e adaptando ERPs para clientes de diferentes segmentos. De lá fui para a <strong>Viasoft</strong>, onde atuei como analista de requisitos e testes — e depois passei a administrar a mesma stack do lado cliente, adquirindo uma perspectiva dupla rara.',
-    about_p2: 'Na Plantagro fui o único responsável pela infraestrutura de TI — <strong>ERP, banco Oracle, firewall, BI, tudo</strong>. Em paralelo, pesquiso segurança ofensiva sob o nome <strong>GhostOpcode</strong>: pentest, recon, exploração de aplicações web.',
-    about_p3: 'Acredito em construir coisas que escalam e em entender sistemas de ponta a ponta antes de tocá-los.',
+    about_p2: 'Na Plantagro respondi por toda a infraestrutura de TI — <strong>ERP, banco Oracle, firewall e BI</strong> — trabalhando próximo à gestão para garantir disponibilidade e segurança dos sistemas. Em paralelo, pesquiso segurança ofensiva sob o nome <strong>GhostOpcode</strong>: pentest, recon, exploração de aplicações web.',
+    about_p3: 'Prefiro entender o sistema todo antes de tocar em qualquer parte — diagnóstico correto evita retrabalho e entrega resultado mais rápido para o negócio.',
 
     exp_results_label: 'resultados',
 
