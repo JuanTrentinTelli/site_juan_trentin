@@ -5,7 +5,7 @@ var I18n = {
     nav_about: 'about', nav_experience: 'experience', nav_projects: 'projects',
     nav_services: 'services', nav_terminal: 'terminal', nav_contact: 'contact',
 
-    hero_label: '// systems supervisor · security researcher',
+    hero_label: '// systems analyst · security researcher',
     hero_subtitle: 'Building systems that work.<br><span class="accent">Breaking systems that shouldn\'t.</span>',
     hero_paragraph: '10 years in IT building and sustaining corporate systems — ERP, infrastructure and security. I deliver technical results with business awareness and work well both in teams and independently.',
     hero_location: '// Guarapuava, pr  ·  available for projects',
@@ -105,7 +105,7 @@ var I18n = {
     nav_about: 'sobre', nav_experience: 'experiencia', nav_projects: 'proyectos',
     nav_services: 'servicios', nav_terminal: 'terminal', nav_contact: 'contacto',
 
-    hero_label: '// supervisor de sistemas · investigador de seguridad',
+    hero_label: '// analista de sistemas · investigador de seguridad',
     hero_subtitle: 'Construyo sistemas que funcionan.<br><span class="accent">Rompo los que no deberían.</span>',
     hero_paragraph: '10 años en IT construyendo y sosteniendo sistemas corporativos — ERP, infraestructura y seguridad. Entrego resultados técnicos con visión de negocio y trabajo bien tanto en equipo como de forma autónoma.',
     hero_location: '// Guarapuava, pr  ·  disponible para proyectos',
@@ -205,7 +205,7 @@ var I18n = {
     nav_about: 'sobre', nav_experience: 'experiência', nav_projects: 'projetos',
     nav_services: 'serviços', nav_terminal: 'terminal', nav_contact: 'contato',
 
-    hero_label: '// systems supervisor · security researcher',
+    hero_label: '// analista de sistemas · pesquisador em segurança',
     hero_subtitle: 'Construo sistemas que funcionam.<br><span class="accent">Quebro sistemas que não deveriam.</span>',
     hero_paragraph: '10 anos em IT construindo e sustentando sistemas corporativos — ERP, infraestrutura e segurança. Entrego resultado técnico com visão de negócio e trabalho bem tanto em equipe quanto de forma autônoma.',
     hero_location: '// Guarapuava, pr  ·  disponível para projetos',
