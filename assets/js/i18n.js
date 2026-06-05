@@ -7,7 +7,7 @@ var I18n = {
 
     hero_label: '// systems supervisor · security researcher',
     hero_subtitle: 'Building systems that work.<br><span class="accent">Breaking systems that shouldn\'t.</span>',
-    hero_paragraph: '10 years in IT across systems analysis, enterprise ERP and offensive security research. Currently supervising infrastructure at Plantagro and operating as GhostOpcode in pentesting.',
+    hero_paragraph: '10 years in IT across systems analysis, enterprise ERP and offensive security research. Operating as GhostOpcode in pentesting and open to new challenges.',
     hero_location: '// Guarapuava, pr  ·  available for projects',
     cta_contact: 'get in touch',
     cta_projects: 'view projects ↓',
@@ -17,11 +17,11 @@ var I18n = {
     label_terminal: '05 / terminal', label_contact: '06 / contact',
     label_certs: 'certifications',
 
-    about_p1: 'Started as a <strong>Systems Analyst at Ellon Tecnologia</strong>, spending over 5 years implementing and adapting ERPs for clients across different segments. From there I moved to <strong>Viasoft</strong>, working as a requirements and testing analyst — and today I manage the same stack from the client side, with a rare dual perspective.',
-    about_p2: 'Today I am solely responsible for Plantagro\'s IT infrastructure — <strong>ERP, Oracle database, firewall, BI, everything</strong>. In parallel, I research offensive security under the name <strong>GhostOpcode</strong>: pentesting, recon, web application exploitation.',
+    about_p1: 'Started as a <strong>Systems Analyst at Ellon Tecnologia</strong>, spending over 5 years implementing and adapting ERPs for clients across different segments. From there I moved to <strong>Viasoft</strong>, working as a requirements and testing analyst — then moved to manage the same stack from the client side, gaining a rare dual perspective.',
+    about_p2: 'At Plantagro I was solely responsible for IT infrastructure — <strong>ERP, Oracle database, firewall, BI, everything</strong>. In parallel, I research offensive security under the name <strong>GhostOpcode</strong>: pentesting, recon, web application exploitation.',
     about_p3: 'I believe in building things that scale and understanding systems end-to-end before touching them.',
 
-    exp_current: 'present', exp_results_label: 'results', tag_current: 'current',
+    exp_results_label: 'results',
 
     plantagro_role: 'Systems Supervisor',
     plantagro_li1: 'Coordinate IT infrastructure, ensuring availability, security and performance of corporate systems.',
@@ -107,7 +107,7 @@ var I18n = {
 
     hero_label: '// supervisor de sistemas · investigador de seguridad',
     hero_subtitle: 'Construyo sistemas que funcionan.<br><span class="accent">Rompo los que no deberían.</span>',
-    hero_paragraph: '10 años en IT entre análisis de sistemas, ERP corporativo e investigación en seguridad ofensiva. Actualmente supervisando infraestructura en Plantagro y operando como GhostOpcode en pentesting.',
+    hero_paragraph: '10 años en IT entre análisis de sistemas, ERP corporativo e investigación en seguridad ofensiva. Operando como GhostOpcode en pentesting y abierto a nuevos desafíos.',
     hero_location: '// Guarapuava, pr  ·  disponible para proyectos',
     cta_contact: 'contactar',
     cta_projects: 'ver proyectos ↓',
@@ -117,11 +117,11 @@ var I18n = {
     label_terminal: '05 / terminal', label_contact: '06 / contacto',
     label_certs: 'certificaciones',
 
-    about_p1: 'Comencé como <strong>Analista de Sistemas en Ellon Tecnologia</strong>, pasando más de 5 años implementando y adaptando ERPs para clientes de diferentes segmentos. De allí pasé a <strong>Viasoft</strong>, donde trabajé como analista de requisitos y pruebas — y hoy administro el mismo stack del lado cliente, con una perspectiva doble poco común.',
-    about_p2: 'Hoy soy el único responsable de la infraestructura de TI de Plantagro — <strong>ERP, base Oracle, firewall, BI, todo</strong>. En paralelo, investigo seguridad ofensiva bajo el nombre <strong>GhostOpcode</strong>: pentest, recon, explotación de aplicaciones web.',
+    about_p1: 'Comencé como <strong>Analista de Sistemas en Ellon Tecnologia</strong>, pasando más de 5 años implementando y adaptando ERPs para clientes de diferentes segmentos. De allí pasé a <strong>Viasoft</strong>, donde trabajé como analista de requisitos y pruebas — luego pasé a administrar el mismo stack del lado cliente, adquiriendo una perspectiva doble poco común.',
+    about_p2: 'En Plantagro fui el único responsable de la infraestructura de TI — <strong>ERP, base Oracle, firewall, BI, todo</strong>. En paralelo, investigo seguridad ofensiva bajo el nombre <strong>GhostOpcode</strong>: pentest, recon, explotación de aplicaciones web.',
     about_p3: 'Creo en construir cosas que escalan y en entender los sistemas de punta a punta antes de tocarlos.',
 
-    exp_current: 'presente', exp_results_label: 'resultados', tag_current: 'actual',
+    exp_results_label: 'resultados',
 
     plantagro_role: 'Supervisor de Sistemas',
     plantagro_li1: 'Coordinar la infraestructura de TI, garantizando disponibilidad, seguridad y rendimiento de los sistemas corporativos.',
@@ -207,7 +207,7 @@ var I18n = {
 
     hero_label: '// systems supervisor · security researcher',
     hero_subtitle: 'Construo sistemas que funcionam.<br><span class="accent">Quebro sistemas que não deveriam.</span>',
-    hero_paragraph: '10 anos em IT entre análise de sistemas, ERP corporativo e pesquisa em segurança ofensiva. Atualmente supervisionando infraestrutura na Plantagro e operando como GhostOpcode em pentest.',
+    hero_paragraph: '10 anos em IT entre análise de sistemas, ERP corporativo e pesquisa em segurança ofensiva. Operando como GhostOpcode em pentest e aberto a novos desafios.',
     hero_location: '// Guarapuava, pr  ·  disponível para projetos',
     cta_contact: 'entrar em contato',
     cta_projects: 'ver projetos ↓',
@@ -217,11 +217,11 @@ var I18n = {
     label_terminal: '05 / terminal', label_contact: '06 / contato',
     label_certs: 'certificações',
 
-    about_p1: 'Comecei como <strong>Analista de Sistemas na Ellon Tecnologia</strong>, passando mais de 5 anos implementando e adaptando ERPs para clientes de diferentes segmentos. De lá fui para a <strong>Viasoft</strong>, onde atuei como analista de requisitos e testes — e hoje administro a mesma stack do lado cliente, com uma perspectiva dupla rara.',
-    about_p2: 'Hoje sou o único responsável pela infraestrutura de TI da Plantagro — <strong>ERP, banco Oracle, firewall, BI, tudo</strong>. Em paralelo, pesquiso segurança ofensiva sob o nome <strong>GhostOpcode</strong>: pentest, recon, exploração de aplicações web.',
+    about_p1: 'Comecei como <strong>Analista de Sistemas na Ellon Tecnologia</strong>, passando mais de 5 anos implementando e adaptando ERPs para clientes de diferentes segmentos. De lá fui para a <strong>Viasoft</strong>, onde atuei como analista de requisitos e testes — e depois passei a administrar a mesma stack do lado cliente, adquirindo uma perspectiva dupla rara.',
+    about_p2: 'Na Plantagro fui o único responsável pela infraestrutura de TI — <strong>ERP, banco Oracle, firewall, BI, tudo</strong>. Em paralelo, pesquiso segurança ofensiva sob o nome <strong>GhostOpcode</strong>: pentest, recon, exploração de aplicações web.',
     about_p3: 'Acredito em construir coisas que escalam e em entender sistemas de ponta a ponta antes de tocá-los.',
 
-    exp_current: 'presente', exp_results_label: 'resultados', tag_current: 'atual',
+    exp_results_label: 'resultados',
 
     plantagro_role: 'Supervisor de Sistemas',
     plantagro_li1: 'Coordenar a infraestrutura de TI, garantindo disponibilidade, segurança e desempenho dos sistemas corporativos.',
